@@ -198,50 +198,51 @@
     @media (max-width: 640px) { .card { padding: 2rem 1.25rem; } .profile-title h1 { font-size: 2.1rem; } .gallery-grid { grid-template-columns: 1fr; gap: 2rem; } }
     
     /* Container for the images */
-    .ig-img-wrap { 
-      position: relative; 
-      aspect-ratio: 4 / 5; 
-      overflow: hidden; 
-    }
+.ig-img-wrap { 
+  position: relative; 
+  aspect-ratio: 4 / 5; 
+  overflow: hidden; 
+}
 
-    /* The swiping track */
-    .carousel { 
-      display: flex; 
-      overflow-x: auto; 
-      scroll-snap-type: x mandatory; 
-      height: 100%; 
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE/Edge */
-    }
-    .carousel::-webkit-scrollbar { 
-      display: none; /* Chrome/Safari */
-    }
+/* The swiping track */
+.carousel { 
+  display: flex; 
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory; 
+  height: 100%; 
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.carousel::-webkit-scrollbar { 
+  display: none; /* Chrome/Safari */
+}
 
-    /* The individual images */
-    .carousel img { 
-      width: 100%; 
-      height: 100%; 
-      object-fit: cover; 
-      flex-shrink: 0; 
-      scroll-snap-align: center; 
-      cursor: pointer;
-    }
+/* The individual images */
+.carousel img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  flex-shrink: 0; 
+  scroll-snap-align: center; 
+  cursor: pointer;
+}
 
-    /* The photo counter badge */
-    .photo-counter {
-      position: absolute; 
-      top: 12px; 
-      right: 12px; 
-      background: rgba(0, 0, 0, 0.65);
-      color: #fff; 
-      font-size: 0.75rem; 
-      padding: 4px 10px; 
-      border-radius: 12px;
-      z-index: 5; 
-      font-weight: 600; 
-      pointer-events: none; 
-      display: none; 
-    }
+/* The photo counter badge */
+.photo-counter {
+  position: absolute; 
+  top: 12px; 
+  right: 12px; 
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff; 
+  font-size: 0.75rem; 
+  padding: 4px 10px; 
+  border-radius: 12px;
+  z-index: 5; 
+  font-weight: 600; 
+  pointer-events: none; 
+  display: none; /* Hidden by default until JS detects multiple images */
+}
+
   </style>
 </head>
 <body>
@@ -291,210 +292,223 @@
       <div class="gallery-grid">
         
         <!-- Post 9 (Index 0) -->
-        <div class="gallery-item" data-post-index="0">
-          <div class="ig-header">
-            <img src="profile.jpeg" alt="Avatar">
-            <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
-          </div>
-          <div class="ig-img-wrap">
-            <div class="photo-counter"></div>
-            <div class="carousel">
-              <img src="71.jpeg" alt="Gallery Photo 1">
-            </div>
-            <i class="fa-solid fa-heart big-heart"></i>
-          </div>
-          <div class="ig-actions">
-            <i class="fa-regular fa-heart heart-icon"></i>
-            <i class="fa-regular fa-comment comment-icon"></i> 
-            <i class="fa-regular fa-paper-plane share-icon"></i>
-          </div>
-          <div class="ig-caption">
-            <strong>_khushal_wagh_</strong>😎💥      ㅤㅤㅤㅤㅤㅤ   <a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
-          </div>
-        </div>
+<div class="gallery-item" data-post-index="0">
+  <div class="ig-header">
+    <img src="profile.jpeg" alt="Avatar">
+    <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
+  </div>
+  <div class="ig-img-wrap">
+    <div class="photo-counter"></div>
+    <div class="carousel">
+      <img src="71.jpeg" alt="Gallery Photo 1">
+
+    </div>
+    <i class="fa-solid fa-heart big-heart"></i>
+  </div>
+  <div class="ig-actions">
+    <i class="fa-regular fa-heart heart-icon"></i>
+    <i class="fa-regular fa-comment comment-icon"></i> 
+    <i class="fa-regular fa-paper-plane share-icon"></i>
+  </div>
+  <div class="ig-caption">
+    <strong>_khushal_wagh_</strong>😎💥      ㅤㅤㅤㅤㅤㅤ   <a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
+  </div>
+</div>
 
         <!-- Post 8 (Index 0) -->
-        <div class="gallery-item" data-post-index="0">
-          <div class="ig-header">
-            <img src="profile.jpeg" alt="Avatar">
-            <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
-          </div>
-          <div class="ig-img-wrap">
-            <div class="photo-counter"></div>
-            <div class="carousel">
-              <img src="61.jpeg" alt="Gallery Photo 1">
-            </div>
-            <i class="fa-solid fa-heart big-heart"></i>
-          </div>
-          <div class="ig-actions">
-            <i class="fa-regular fa-heart heart-icon"></i>
-            <i class="fa-regular fa-comment comment-icon"></i> 
-            <i class="fa-regular fa-paper-plane share-icon"></i>
-          </div>
-          <div class="ig-caption">
-            <strong>_khushal_wagh_</strong> Pink wibe 🩷  <a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
-          </div>
-        </div>
+<div class="gallery-item" data-post-index="0">
+  <div class="ig-header">
+    <img src="profile.jpeg" alt="Avatar">
+    <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
+  </div>
+  <div class="ig-img-wrap">
+    <div class="photo-counter"></div>
+    <div class="carousel">
+      <img src="61.jpeg" alt="Gallery Photo 1">
+
+    </div>
+    <i class="fa-solid fa-heart big-heart"></i>
+  </div>
+  <div class="ig-actions">
+    <i class="fa-regular fa-heart heart-icon"></i>
+    <i class="fa-regular fa-comment comment-icon"></i> 
+    <i class="fa-regular fa-paper-plane share-icon"></i>
+  </div>
+  <div class="ig-caption">
+    <strong>_khushal_wagh_</strong> Pink wibe 🩷  <a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
+  </div>
+</div>
 
         <!-- Post 7 (Index 0) -->
-        <div class="gallery-item" data-post-index="0">
-          <div class="ig-header">
-            <img src="profile.jpeg" alt="Avatar">
-            <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
-          </div>
-          <div class="ig-img-wrap">
-            <div class="photo-counter"></div>
-            <div class="carousel">
-              <img src="31.jpeg" alt="Gallery Photo 1">
-            </div>
-            <i class="fa-solid fa-heart big-heart"></i>
-          </div>
-          <div class="ig-actions">
-            <i class="fa-regular fa-heart heart-icon"></i>
-            <i class="fa-regular fa-comment comment-icon"></i> 
-            <i class="fa-regular fa-paper-plane share-icon"></i>
-          </div>
-          <div class="ig-caption">
-            <strong>_khushal_wagh_</strong>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
-          </div>
-        </div>
-        <!-- Post 6 (Index 0) -->
-        <div class="gallery-item" data-post-index="0">
-          <div class="ig-header">
-            <img src="profile.jpeg" alt="Avatar">
-            <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
-          </div>
-          <div class="ig-img-wrap">
-            <div class="photo-counter"></div>
-            <div class="carousel">
-              <img src="21.jpeg" alt="Gallery Photo 1">
-            </div>
-            <i class="fa-solid fa-heart big-heart"></i>
-          </div>
-          <div class="ig-actions">
-            <i class="fa-regular fa-heart heart-icon"></i>
-            <i class="fa-regular fa-comment comment-icon"></i> 
-            <i class="fa-regular fa-paper-plane share-icon"></i>
-          </div>
-          <div class="ig-caption">
-            <strong>_khushal_wagh_</strong>😎ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
-          </div>
-        </div>
+<div class="gallery-item" data-post-index="0">
+  <div class="ig-header">
+    <img src="profile.jpeg" alt="Avatar">
+    <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
+  </div>
+  <div class="ig-img-wrap">
+    <div class="photo-counter"></div>
+    <div class="carousel">
+      <img src="31.jpeg" alt="Gallery Photo 1">
 
-        <!-- Post 5 (Index 0) -->
-        <div class="gallery-item" data-post-index="0">
-          <div class="ig-header">
-            <img src="profile.jpeg" alt="Avatar">
-            <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
-          </div>
-          <div class="ig-img-wrap">
-            <div class="photo-counter"></div>
-            <div class="carousel">
-              <img src="11.jpeg" alt="Gallery Photo 1">
-            </div>
-            <i class="fa-solid fa-heart big-heart"></i>
-          </div>
-          <div class="ig-actions">
-            <i class="fa-regular fa-heart heart-icon"></i>
-            <i class="fa-regular fa-comment comment-icon"></i> 
-            <i class="fa-regular fa-paper-plane share-icon"></i>
-          </div>
-          <div class="ig-caption">
-            <strong>_khushal_wagh_</strong>🧿⚡ㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
-          </div>
-        </div>
+    </div>
+    <i class="fa-solid fa-heart big-heart"></i>
+  </div>
+  <div class="ig-actions">
+    <i class="fa-regular fa-heart heart-icon"></i>
+    <i class="fa-regular fa-comment comment-icon"></i> 
+    <i class="fa-regular fa-paper-plane share-icon"></i>
+  </div>
+  <div class="ig-caption">
+    <strong>_khushal_wagh_</strong>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
+  </div>
+</div>
+
+        <!-- Post 6 (Index 0) -->
+<div class="gallery-item" data-post-index="0">
+  <div class="ig-header">
+    <img src="profile.jpeg" alt="Avatar">
+    <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
+  </div>
+  <div class="ig-img-wrap">
+    <div class="photo-counter"></div>
+    <div class="carousel">
+      <img src="21.jpeg" alt="Gallery Photo 1">
+
+    </div>
+    <i class="fa-solid fa-heart big-heart"></i>
+  </div>
+  <div class="ig-actions">
+    <i class="fa-regular fa-heart heart-icon"></i>
+    <i class="fa-regular fa-comment comment-icon"></i> 
+    <i class="fa-regular fa-paper-plane share-icon"></i>
+  </div>
+  <div class="ig-caption">
+    <strong>_khushal_wagh_</strong>😎ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
+  </div>
+</div>
+
+<!-- Post 5 (Index 0) -->
+<div class="gallery-item" data-post-index="0">
+  <div class="ig-header">
+    <img src="profile.jpeg" alt="Avatar">
+    <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
+  </div>
+  <div class="ig-img-wrap">
+    <div class="photo-counter"></div>
+    <div class="carousel">
+      <img src="11.jpeg" alt="Gallery Photo 1">
+
+    </div>
+    <i class="fa-solid fa-heart big-heart"></i>
+  </div>
+  <div class="ig-actions">
+    <i class="fa-regular fa-heart heart-icon"></i>
+    <i class="fa-regular fa-comment comment-icon"></i> 
+    <i class="fa-regular fa-paper-plane share-icon"></i>
+  </div>
+  <div class="ig-caption">
+    <strong>_khushal_wagh_</strong>🧿⚡ㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
+  </div>
+</div>
 
         <!-- Post 4 (Index 0) -->
-        <div class="gallery-item" data-post-index="0">
-          <div class="ig-header">
-            <img src="profile.jpeg" alt="Avatar">
-            <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
-          </div>
-          <div class="ig-img-wrap">
-            <div class="photo-counter"></div>
-            <div class="carousel">
-              <img src="62.jpeg" alt="Gallery Photo 1">
-            </div>
-            <i class="fa-solid fa-heart big-heart"></i>
-          </div>
-          <div class="ig-actions">
-            <i class="fa-regular fa-heart heart-icon"></i>
-            <i class="fa-regular fa-comment comment-icon"></i> 
-            <i class="fa-regular fa-paper-plane share-icon"></i>
-          </div>
-          <div class="ig-caption">
-            <strong>_khushal_wagh_</strong>😎🤌ㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
-          </div>
-        </div>
+<div class="gallery-item" data-post-index="0">
+  <div class="ig-header">
+    <img src="profile.jpeg" alt="Avatar">
+    <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
+  </div>
+  <div class="ig-img-wrap">
+    <div class="photo-counter"></div>
+    <div class="carousel">
+      <img src="62.jpeg" alt="Gallery Photo 1">
+
+    </div>
+    <i class="fa-solid fa-heart big-heart"></i>
+  </div>
+  <div class="ig-actions">
+    <i class="fa-regular fa-heart heart-icon"></i>
+    <i class="fa-regular fa-comment comment-icon"></i> 
+    <i class="fa-regular fa-paper-plane share-icon"></i>
+  </div>
+  <div class="ig-caption">
+    <strong>_khushal_wagh_</strong>😎🤌ㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
+  </div>
+</div>
+
 
         <!-- Post 3 (Index 0) -->
-        <div class="gallery-item" data-post-index="0">
-          <div class="ig-header">
-            <img src="profile.jpeg" alt="Avatar">
-            <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
-          </div>
-          <div class="ig-img-wrap">
-            <div class="photo-counter"></div>
-            <div class="carousel">
-              <img src="32.jpeg" alt="Gallery Photo 1">
-            </div>
-            <i class="fa-solid fa-heart big-heart"></i>
-          </div>
-          <div class="ig-actions">
-            <i class="fa-regular fa-heart heart-icon"></i>
-            <i class="fa-regular fa-comment comment-icon"></i> 
-            <i class="fa-regular fa-paper-plane share-icon"></i>
-          </div>
-          <div class="ig-caption">
-            <strong>_khushal_wagh_</strong>🫴❤️‍🩹ㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
-          </div>
-        </div>
+<div class="gallery-item" data-post-index="0">
+  <div class="ig-header">
+    <img src="profile.jpeg" alt="Avatar">
+    <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
+  </div>
+  <div class="ig-img-wrap">
+    <div class="photo-counter"></div>
+    <div class="carousel">
+      <img src="32.jpeg" alt="Gallery Photo 1">
+
+    </div>
+    <i class="fa-solid fa-heart big-heart"></i>
+  </div>
+  <div class="ig-actions">
+    <i class="fa-regular fa-heart heart-icon"></i>
+    <i class="fa-regular fa-comment comment-icon"></i> 
+    <i class="fa-regular fa-paper-plane share-icon"></i>
+  </div>
+  <div class="ig-caption">
+    <strong>_khushal_wagh_</strong>🫴❤️‍🩹ㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
+  </div>
+</div>
+
 
         <!-- Post 2 (Index 0) -->
-        <div class="gallery-item" data-post-index="0">
-          <div class="ig-header">
-            <img src="profile.jpeg" alt="Avatar">
-            <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
-          </div>
-          <div class="ig-img-wrap">
-            <div class="photo-counter"></div>
-            <div class="carousel">
-              <img src="22.jpeg" alt="Gallery Photo 1">
-            </div>
-            <i class="fa-solid fa-heart big-heart"></i>
-          </div>
-          <div class="ig-actions">
-            <i class="fa-regular fa-heart heart-icon"></i>
-            <i class="fa-regular fa-comment comment-icon"></i> 
-            <i class="fa-regular fa-paper-plane share-icon"></i>
-          </div>
-          <div class="ig-caption">
-            <strong>_khushal_wagh_</strong>🌿ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
-          </div>
-        </div>
+<div class="gallery-item" data-post-index="0">
+  <div class="ig-header">
+    <img src="profile.jpeg" alt="Avatar">
+    <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
+  </div>
+  <div class="ig-img-wrap">
+    <div class="photo-counter"></div>
+    <div class="carousel">
+      <img src="22.jpeg" alt="Gallery Photo 1">
+
+    </div>
+    <i class="fa-solid fa-heart big-heart"></i>
+  </div>
+  <div class="ig-actions">
+    <i class="fa-regular fa-heart heart-icon"></i>
+    <i class="fa-regular fa-comment comment-icon"></i> 
+    <i class="fa-regular fa-paper-plane share-icon"></i>
+  </div>
+  <div class="ig-caption">
+    <strong>_khushal_wagh_</strong>🌿ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
+  </div>
+</div>
 
         <!-- Post 1 (Index 0) -->
-        <div class="gallery-item" data-post-index="0">
-          <div class="ig-header">
-            <img src="profile.jpeg" alt="Avatar">
-            <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
-          </div>
-          <div class="ig-img-wrap">
-            <div class="photo-counter"></div>
-            <div class="carousel">
-              <img src="12.jpeg" alt="Gallery Photo 1">
-            </div>
-            <i class="fa-solid fa-heart big-heart"></i>
-          </div>
-          <div class="ig-actions">
-            <i class="fa-regular fa-heart heart-icon"></i>
-            <i class="fa-regular fa-comment comment-icon"></i> 
-            <i class="fa-regular fa-paper-plane share-icon"></i>
-          </div>
-          <div class="ig-caption">
-            <strong>_khushal_wagh_</strong>🧿🤌ㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
-          </div>
-        </div>
+<div class="gallery-item" data-post-index="0">
+  <div class="ig-header">
+    <img src="profile.jpeg" alt="Avatar">
+    <span>Kʜᴜsʜᴀʟ....🤍⚡</span>
+  </div>
+  <div class="ig-img-wrap">
+    <div class="photo-counter"></div>
+    <div class="carousel">
+      <img src="12.jpeg" alt="Gallery Photo 1">
+
+    </div>
+    <i class="fa-solid fa-heart big-heart"></i>
+  </div>
+  <div class="ig-actions">
+    <i class="fa-regular fa-heart heart-icon"></i>
+    <i class="fa-regular fa-comment comment-icon"></i> 
+    <i class="fa-regular fa-paper-plane share-icon"></i>
+  </div>
+  <div class="ig-caption">
+    <strong>_khushal_wagh_</strong>🧿🤌ㅤㅤㅤㅤㅤㅤㅤㅤㅤ<a href="#" class="hashtag">#photography</a> <a href="#" class="hashtag">#post</a>
+  </div>
+</div>
+
 
       </div>
     </div>
@@ -526,15 +540,15 @@
       </div>
     </div>
   </div>
-  <script>
+   <script>
 
-    // Automatically update footer year
-    const today = new Date();
-    document.getElementById('current-year').textContent = today.getFullYear();
+// Automatically update footer year
+const today = new Date();
+document.getElementById('current-year').textContent = today.getFullYear();
 
-    // Format and display the current date (Month DD, YYYY)
-    const dateOptions = { month: 'long', day: '2-digit', year: 'numeric' };
-    document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', dateOptions);
+// Format and display the current date (Month DD, YYYY)
+const dateOptions = { month: 'long', day: '2-digit', year: 'numeric' };
+document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', dateOptions);
 
 
     // 1. Color Palette Switcher
@@ -636,10 +650,11 @@
     });
 
     // =======================================================
-    // 5. Updated Share Functionality (IG Browser & Native Sharing)
+    // 5. Updated Share Functionality (Image/File Sharing)
     // =======================================================
     document.querySelectorAll('.share-icon').forEach(btn => {
       btn.addEventListener('click', async (e) => {
+        // Retrieve the gallery item and carousel logic to pinpoint the visible image
         const galleryItem = e.target.closest('.gallery-item');
         const carousel = galleryItem.querySelector('.carousel');
         const activeIndex = carousel ? Math.round(carousel.scrollLeft / carousel.clientWidth) : 0;
@@ -648,40 +663,23 @@
         if (images.length > 0) {
           const activeImage = images[activeIndex];
           const imgSrc = activeImage.src;
-          const fallbackUrl = "https://khushal-wagh.github.io/Portfolio/";
 
-          // Detect Instagram In-App Browser
-          const isInstagramBrowser = /Instagram/i.test(navigator.userAgent);
-
-          if (isInstagramBrowser) {
-            // Instagram's in-app browser heavily restricts file sharing via navigator.share.
-            // We guide the user to copy the link and open in system browser to share to Story/Friends.
-            try {
-              await navigator.clipboard.writeText(fallbackUrl);
-              alert("📸 Link Copied!\n\nTo share this photo to your Instagram Story or with Friends, tap the 3 dots (⋮) in the top right corner and select 'Open in system browser'.");
-            } catch (err) {
-              alert("📸 To share this photo to your Instagram Story or Friends, tap the 3 dots (⋮) in the top right corner and select 'Open in system browser'.");
-            }
-            return; // Exit early to avoid fetch errors in IG browser restrictions
-          }
-
-          // Standard Web Share API for Safari/Chrome (System Browsers)
           try {
-            // Fetch image properly to share to native Story/Chats
+            // Fetch the image to prepare it as a shareable file
             const response = await fetch(imgSrc);
             const blob = await response.blob();
             const filename = imgSrc.split('/').pop() || 'photo.jpeg';
             const file = new File([blob], filename, { type: blob.type });
 
-            // Ensure the browser and device can share files (Triggers OS Share Sheet with IG Story / Chats option)
+            // Check if file sharing is supported on this device/browser
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
               await navigator.share({
                 title: 'Khushal Wagh Portfolio',
-                text: 'Check out this photo from my portfolio!',
+                text:"",
                 files: [file]
               });
             } else if (navigator.share) {
-              // Fallback to URL only
+              // Fallback to sharing just the image URL
               await navigator.share({
                 title: 'Khushal Wagh Portfolio',
                 text: 'Check out this photo!',
@@ -692,7 +690,8 @@
             }
           } catch (error) {
             console.error("Error sharing the image:", error);
-            // Final fallback sharing the page link
+            // Final fallback to just sharing the website URL if fetch/share fails
+            const fallbackUrl = "https://khushal-wagh.github.io/Portfolio/";
             if (navigator.share) {
               navigator.share({ title: 'Khushal Wagh Portfolio', url: fallbackUrl }).catch(console.error);
             } else {
@@ -813,48 +812,49 @@
     });
     
     document.querySelectorAll('.ig-img-wrap').forEach(wrap => {
-      const carousel = wrap.querySelector('.carousel');
-      const counter = wrap.querySelector('.photo-counter');
-      const images = carousel.querySelectorAll('img');
-      const totalImages = images.length;
+  const carousel = wrap.querySelector('.carousel');
+  const counter = wrap.querySelector('.photo-counter');
+  const images = carousel.querySelectorAll('img');
+  const totalImages = images.length;
 
-      // Only show the counter if there is more than 1 image
-      if (totalImages > 1) {
-        counter.style.display = 'block';
-        counter.textContent = `1/${totalImages}`;
-        
-        // Listen for scroll/swipe events
-        carousel.addEventListener('scroll', () => {
-          // Calculate which image is currently in the center of the view
-          const index = Math.round(carousel.scrollLeft / carousel.clientWidth) + 1;
-          counter.textContent = `${index}/${totalImages}`;
-        });
-      }
+  // Only show the counter if there is more than 1 image
+  if (totalImages > 1) {
+    counter.style.display = 'block';
+    counter.textContent = `1/${totalImages}`;
+    
+    // Listen for scroll/swipe events
+    carousel.addEventListener('scroll', () => {
+      // Calculate which image is currently in the center of the view
+      const index = Math.round(carousel.scrollLeft / carousel.clientWidth) + 1;
+      counter.textContent = `${index}/${totalImages}`;
     });
+  }
+});
 
-    function updateTime() {
-        const timeElement = document.getElementById('currentTime');
+
+function updateTime() {
+    const timeElement = document.getElementById('currentTime');
+    
+    if (timeElement) {
+        const now = new Date();
         
-        if (timeElement) {
-            const now = new Date();
-            
-            // Format the time (e.g., 10:45:30 AM)
-            const timeOptions = { 
-                hour: '2-digit', 
-                minute: '2-digit', 
-                second: '2-digit',
-                hour12: true 
-            };
-            
-            timeElement.textContent = now.toLocaleTimeString('en-US', timeOptions);
-        }
+        // Format the time (e.g., 10:45:30 AM)
+        const timeOptions = { 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit',
+            hour12: true 
+        };
+        
+        timeElement.textContent = now.toLocaleTimeString('en-US', timeOptions);
     }
+}
 
-    // Run immediately to avoid 1-second delay
-    updateTime();
+// Run immediately to avoid 1-second delay
+updateTime();
 
-    // Update every second (1000 milliseconds)
-    setInterval(updateTime, 1000);
+// Update every second (1000 milliseconds)
+setInterval(updateTime, 1000);
 
   </script>
 </body>
